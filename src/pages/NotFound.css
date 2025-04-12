@@ -1,0 +1,84 @@
+/* NotFound Page Styles */
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f7f9fc;
+  }
+  
+  .not-found-content {
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .not-found-content:hover {
+    transform: translateY(-5px);
+  }
+  
+  .not-found-icon {
+    font-size: 72px;
+    font-weight: 700;
+    color: #5a67d8;
+    margin-bottom: 20px;
+    line-height: 1;
+    text-shadow: 2px 2px 0 rgba(90, 103, 216, 0.2);
+  }
+  
+  .not-found-content h1 {
+    color: #1f2937;
+    font-size: 28px;
+    margin: 0 0 16px 0;
+    font-weight: 600;
+  }
+  
+  .not-found-content p {
+    color: #6b7280;
+    font-size: 16px;
+    margin: 0 0 30px 0;
+    line-height: 1.5;
+  }
+  
+  .home-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #5a67d8;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #4c51bf;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(90, 103, 216, 0.25);
+  }
+  
+  .home-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 480px) {
+    .not-found-content {
+      padding: 30px 20px;
+    }
+    
+    .not-found-icon {
+      font-size: 60px;
+    }
+    
+    .not-found-content h1 {
+      font-size: 24px;
+    }
+  }

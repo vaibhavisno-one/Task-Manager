@@ -1,0 +1,209 @@
+/* TaskCard Styles */
+.task-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+  }
+  
+  .task-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: #e5e7eb;
+  }
+  
+  .task-card.completed {
+    background-color: #f9fafb;
+  }
+  
+  .task-card.completed .task-title {
+    color: #9ca3af;
+    text-decoration: line-through;
+  }
+  
+  .task-card.overdue:not(.completed) {
+    border-left: 3px solid #ef4444;
+  }
+  
+  /* Task Header */
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .priority-badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  .priority-high {
+    background-color: #fee2e2;
+    color: #b91c1c;
+  }
+  
+  .priority-medium {
+    background-color: #fef3c7;
+    color: #92400e;
+  }
+  
+  .priority-low {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+  }
+  
+  /* Checkbox Styling */
+  .task-status {
+    position: relative;
+  }
+  
+  .task-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkbox-label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .checkbox-custom {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+  }
+  
+  .task-checkbox:checked + .checkbox-label .checkbox-custom {
+    background-color: #5a67d8;
+    border-color: #5a67d8;
+  }
+  
+  .task-checkbox:checked + .checkbox-label .checkbox-custom::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .task-checkbox:focus + .checkbox-label .checkbox-custom {
+    box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.12);
+  }
+  
+  /* Task Content */
+  .task-content {
+    margin-bottom: 16px;
+  }
+  
+  .task-title {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f2937;
+    transition: color 0.2s ease;
+  }
+  
+  .task-description {
+    margin: 0;
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.5;
+  }
+  
+  /* Task Footer */
+  .task-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+  
+  .due-date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #6b7280;
+    font-size: 13px;
+  }
+  
+  .overdue-text {
+    color: #ef4444;
+    font-weight: 500;
+  }
+  
+  /* Task Actions */
+  .task-actions {
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .task-actions.visible {
+    opacity: 1;
+  }
+  
+  .action-button {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background-color: transparent;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .action-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .edit-button:hover {
+    color: #5a67d8;
+  }
+  
+  .delete-button:hover {
+    color: #ef4444;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .task-actions {
+      opacity: 1;
+    }
+    
+    .task-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .task-actions {
+      align-self: flex-end;
+    }
+  }
